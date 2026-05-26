@@ -3,9 +3,6 @@
 <div align="center">
 
 **MATHOS** is an ultra-premium, feature-rich scientific calculator and mathematical utility suite designed as a world-class portfolio showcase. Converting standard calculators into complete mathematical sandboxes, it couples high-performance algebraic parsing with next-level visual design (Glassmorphism, tactile Neumorphism, and glowing Neon themes).
-
-[Explore Mathos](#) • [Report Bug](https://github.com) • [Request Feature](https://github.com)
-
 </div>
 
 ---
