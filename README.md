@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# 🧮 MATHOS — Premium Computational Suite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+**MATHOS** is an ultra-premium, feature-rich scientific calculator and mathematical utility suite designed as a world-class portfolio showcase. Converting standard calculators into complete mathematical sandboxes, it couples high-performance algebraic parsing with next-level visual design (Glassmorphism, tactile Neumorphism, and glowing Neon themes).
 
-In the project directory, you can run:
+[Explore Mathos](#) • [Report Bug](https://github.com) • [Request Feature](https://github.com)
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🎨 Visual Aesthetics & Themes
 
-### `npm test`
+Mathos features **four hand-crafted styling engines** built with modern CSS variables, fluid backdrops, and active shadow casting:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **🔮 Glassmorphism Dark (Default)**: Deep translucent backdrop-blurs overlaying organic slow-drifting color blobs.
+2. **🧼 Neumorphic Light**: Soft tactile physical beveled keys with realistic offset double shadows simulating depth.
+3. **👾 Cyberpunk Neon**: Ultra-high contrast dark interfaces, hot pink borders, and cyan glowing labels.
+4. **📟 Retro LCD**: 80s liquid-crystal green grid with classic digital monospace layouts.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Advanced Feature Matrix
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Module | Sub-Features | Under the Hood |
+| :--- | :--- | :--- |
+| **🧮 Scientific Calculator** | Standard arithmetic, braces, `sin`/`cos`/`tan`, `log`/`ln`, powers `^`, and absolute rules | **Pratt Tokenizer & Shunting-Yard Parser** executing equations safely without standard `eval` |
+| **📈 Canvas Grapher** | Plot any custom function `y = f(x)` (e.g., `sin(x)`, `x^2 - 4`) live in interactive viewports | Fast pixel-to-grid map scaling with mathematical range loops, ticks, axes, and neon sweeps |
+| **🔄 Multi-Converter** | Convert Length, Weight, Temp, and Area. Simulated live **Currency Exchange** API | Ratios conversion tables + synthetic fetch load delays, and live updates status badges |
+| **📐 Equation Solver** | Solves Quadratic forms ($ax^2+bx+c=0$) and 2x2 Linear Systems in real-time | Automated discriminant evaluation (real/imaginary complex roots) and **Cramer's Determinant Rule** |
+| **🗣️ Voice Dictation** | Speak computational queries e.g. *"ten plus sine of ninety equals"* to solve instantly | Integrated **HTML5 Speech Recognition** API mapping english verbal terms to math symbols |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🎵 Dynamic Sensory Micro-Interactions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **Oscillator Key Sound Synthesis**: Toggling sounds plays mechanical clicks, digital high-tech sweeps, or success chimes generated *natively* on the fly via browser **Web Audio API** (requires zero static asset fetches).
+* **Framer Motion Tactile Keyboards**: All buttons scale down and pop back during clicks utilizing custom spring physics. All screen transitions and lists use fluid staggering.
+* **Victory Confetti Burst**: Solving equations or copying results triggers celebratory floating physics confetti.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Repository Directory Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The project has been refactored into a highly clean, modular, and type-safe architecture:
 
-## Learn More
+```
+src/
+├── components/           # Modular UI Components
+│   ├── BackgroundBlobs.tsx    # Slow floating dynamic glow blobs
+│   ├── LoadingScreen.tsx      # SVG-driven high-tech loader sequence
+│   ├── Calculator.tsx         # Resizing card shell (Std vs Sci)
+│   ├── Display.tsx            # Main scrollable typing screen & result preview
+│   ├── StandardKeys.tsx       # Standard arithmetic number keys grid
+│   ├── ScientificKeys.tsx     # Extended trigonometric and function keys
+│   ├── MemoryKeys.tsx         # MC, MR, M+, M- persistent memory slot pad
+│   ├── HistoryPanel.tsx       # Scrolling side history displaying past results
+│   ├── GraphPlotter.tsx       # Graphing board leveraging html5 canvas
+│   ├── UnitConverter.tsx      # Combined Units and simulated Currency exchange board
+│   ├── EquationSolver.tsx     # Solves and breaks down Quadratic and Linear system equations
+│   └── VoiceInput.tsx         # Voice dictation mapping engine
+├── hooks/                # Custom stateful hooks
+│   └── useLocalStorage.ts     # Synchronizes states (history, memory, theme) to LocalStorage
+├── utils/                # Pure logic computations
+│   ├── mathParser.ts          # Custom Pratt tokenization & Shunting-Yard math evaluator
+│   ├── audioSynth.ts          # Physical audio waveforms synthesizer (sine/triangle oscillators)
+│   └── conversion.ts          # Conversion ratio configurations
+├── context/              # Central State Provider
+│   └── CalculatorContext.tsx  # Centralized logic, keyboard hotkeys, and triggers
+├── styles/               # Global Design Systems
+│   └── variables.css          # Dynamic CSS custom tokens defining theme palettes
+├── App.tsx               # Main visual route layout manager
+├── index.tsx             # DOM mount script
+└── react-app-env.d.ts    # React TS declarations
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Installation & Setup
 
-### Code Splitting
+Ensure you have **Node.js (v16.0.0 or higher)** installed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository and navigate into it:
+   ```bash
+   cd react-calculator
+   ```
 
-### Analyzing the Bundle Size
+2. Install premium dependencies:
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Run the development suite:
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the suite running in real-time.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📦 Suggested NPM Packages Incorporated
 
-### Advanced Configuration
+* **`framer-motion`** — Utilized for spring button presses and sidebar fade entries.
+* **`lucide-react`** — Used for modern, lightweight, stroke-based minimal icons.
+* **`canvas-confetti`** — Triggers beautiful satisfaction feedback upon evaluations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## ☁️ Deployment Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### ⚡ Deploying on Vercel
+The absolute easiest way to deploy the suite is using Vercel:
 
-### `npm run build` fails to minify
+1. Install Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+2. Run deployment command in root directory:
+   ```bash
+   vercel
+   ```
+3. Follow the prompts. The build folder is automatically set to `build` by CRA configurations!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 🌍 Deploying on Netlify
+To publish live on Netlify:
+
+1. Install Netlify CLI:
+   ```bash
+   npm install -g netlify-cli
+   ```
+2. Build the production assets:
+   ```bash
+   npm run build
+   ```
+3. Trigger deployment:
+   ```bash
+   netlify deploy --dir=build --prod
+   ```
+
+---
+
+## 🤝 Contribution Guidelines
+
+We highly encourage mathematical and stylistic contributions! 
+* Open an issue to discuss design enhancements.
+* Create a branch (`feature/math-addition`) and submit a pull request.
+* Please ensure code builds without compilation warnings and adheres to standard ESLint parameters.
+
+---
+
+## 📄 License
+This project is open-source under the terms of the [MIT License](./LICENSE).
+
+---
+
+<div align="center">
+  <sub>Built with mathematical precision and design love by the Mathos Team. 🧮✨</sub>
+</div>

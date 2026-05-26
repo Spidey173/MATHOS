@@ -1,0 +1,193 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  border: var(--border-panel);
+  backdrop-filter: var(--panel-backdrop);
+  -webkit-backdrop-filter: var(--panel-backdrop);
+  padding: 24px;
+  border-radius: var(--border-radius-panel);
+  box-shadow: var(--shadow-panel);
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  transition: all var(--transition-slow);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  color: var(--color-text-accent);
+}
+
+.header h3 {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.zoomControls {
+  display: flex;
+  gap: 6px;
+}
+
+.ctrlBtn {
+  background: var(--bg-button);
+  border: var(--border-button);
+  color: var(--color-text-muted);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ctrlBtn:hover {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.ctrlBtn:active {
+  transform: translateY(0);
+}
+
+.inputArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-panel-darker);
+  border: var(--border-panel);
+  padding: 10px 16px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.prefix {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--color-text-accent);
+  font-size: 1.1rem;
+}
+
+.equationInput {
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  width: 100%;
+  outline: none;
+}
+
+.errorText {
+  color: #fca5a5;
+  font-size: 0.72rem;
+  text-align: left;
+  margin: 0 0 8px 4px;
+}
+
+.canvasWrapper {
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: crosshair;
+}
+
+.presetsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.presetLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.presetsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.presetBtn {
+  background: var(--bg-button);
+  border: var(--border-button);
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.presetBtn:hover {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+}
+
+.presetActive {
+  background: var(--bg-button-operator);
+  color: var(--color-text-operator);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.tipBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-align: left;
+}
+
+.tipIcon {
+  color: var(--color-text-operator);
+  flex-shrink: 0;
+}
+
+.tipBox code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}

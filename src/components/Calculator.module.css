@@ -1,0 +1,173 @@
+.calculatorCard {
+  background: var(--bg-panel);
+  border: var(--border-panel);
+  backdrop-filter: var(--panel-backdrop);
+  -webkit-backdrop-filter: var(--panel-backdrop);
+  padding: 24px;
+  border-radius: var(--border-radius-panel);
+  box-shadow: var(--shadow-panel);
+  width: 100%;
+  max-width: 420px; /* Default standard compact width */
+  margin: 0 auto;
+  transition: max-width var(--transition-slow), background var(--transition-slow), border var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+/* Dynamically expand calculator card to double columns on desktop when scientific is open */
+:global(.theme-glass) .calculatorCard,
+:global(.theme-neo) .calculatorCard,
+:global(.theme-neon) .calculatorCard,
+:global(.theme-retro) .calculatorCard {
+  /* Dynamic width classes helper */
+}
+
+/* We will control this resizer by setting max-width container values directly in CSS when parent features are activated */
+.calculatorCard:has(.scientificContainer) {
+  max-width: 800px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.toolbarTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.sparkIcon {
+  color: var(--color-text-accent);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.soundControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  padding: 2px 6px 2px 2px;
+  border-radius: 8px;
+}
+
+.toolBtn {
+  background: var(--bg-button);
+  border: var(--border-button);
+  color: var(--color-text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toolBtn:hover {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.badgeBtn {
+  background: var(--bg-button-operator);
+  border: none;
+  color: var(--color-text-operator);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.modeSwitch {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modeBtn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modeBtnActive {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+  box-shadow: var(--shadow-button);
+}
+
+.keypadsLayout {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.scientificContainer {
+  flex: 1;
+  min-width: 260px;
+  overflow: hidden;
+}
+
+.sciSpacer {
+  padding-bottom: 2px; /* prevents layout clip */
+}
+
+.standardContainer {
+  flex: 1.2;
+  min-width: 280px;
+}
+
+/* Responsive Stacking layouts for mobile screens */
+@media (max-width: 680px) {
+  .calculatorCard:has(.scientificContainer) {
+    max-width: 420px;
+  }
+
+  .keypadsLayout {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .scientificContainer {
+    width: 100% !important;
+  }
+  
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

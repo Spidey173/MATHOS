@@ -1,0 +1,236 @@
+.container {
+  background: var(--bg-panel);
+  border: var(--border-panel);
+  backdrop-filter: var(--panel-backdrop);
+  -webkit-backdrop-filter: var(--panel-backdrop);
+  padding: 24px;
+  border-radius: var(--border-radius-panel);
+  box-shadow: var(--shadow-panel);
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  transition: all var(--transition-slow);
+}
+
+.tabHeader {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+
+.tabBtn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.tabBtnActive {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+  box-shadow: var(--shadow-button);
+}
+
+.sectionBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryBar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.categoryBtn {
+  background: var(--bg-button);
+  border: var(--border-button);
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-fast);
+}
+
+.categoryBtn:hover {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+}
+
+.categoryActive {
+  background: var(--bg-button-operator);
+  color: var(--color-text-operator);
+  border-color: rgba(168, 85, 247, 0.2);
+}
+
+.currencyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ratesBadge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+}
+
+.fetchBtn {
+  background: var(--bg-button);
+  border: var(--border-button);
+  color: var(--color-text-operator);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.fetchBtn:hover:not(:disabled) {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.fetchBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.converterGrid {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.convertCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.convertCol label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.select {
+  background: var(--bg-panel-darker);
+  border: var(--border-panel);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputField {
+  background: var(--bg-panel-darker);
+  border: var(--border-panel);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.resultField {
+  color: var(--color-text-accent);
+  cursor: not-allowed;
+  font-weight: 600;
+}
+
+.swapBtn {
+  background: var(--bg-button-operator);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  color: var(--color-text-operator);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 24px;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.swapBtn:hover {
+  background: var(--bg-button-operator-hover);
+  transform: rotate(180deg);
+  box-shadow: var(--shadow-button);
+}
+
+.swapBtn:active {
+  scale: 0.95;
+}
+
+.spin {
+  animation: rotation 1.2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 520px) {
+  .converterGrid {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .swapBtn {
+    margin-top: 0;
+    transform: rotate(90deg);
+  }
+  
+  .swapBtn:hover {
+    transform: rotate(270deg);
+  }
+}

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* Default typography utilizing Outfit & Poppins */
+  --font-sans: 'Outfit', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+  
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Fallback values (Glassmorphism Dark) */
+  --bg-page: linear-gradient(135deg, #070714 0%, #0c0926 50%, #1c082b 100%);
+  --bg-panel: rgba(10, 12, 32, 0.55);
+  --bg-panel-darker: rgba(5, 6, 20, 0.75);
+  --bg-button: rgba(255, 255, 255, 0.04);
+  --bg-button-hover: rgba(255, 255, 255, 0.1);
+  --bg-button-active: rgba(255, 255, 255, 0.07);
+  --bg-button-operator: rgba(139, 92, 246, 0.15);
+  --bg-button-operator-hover: rgba(139, 92, 246, 0.3);
+  --bg-button-function: rgba(244, 63, 94, 0.1);
+  --bg-button-function-hover: rgba(244, 63, 94, 0.22);
+  --bg-button-equals: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+  --bg-button-equals-hover: linear-gradient(135deg, #a78bfa 0%, #f472b6 100%);
+  
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-text-accent: #d946ef;
+  --color-text-operator: #c084fc;
+  --color-text-function: #fda4af;
+  
+  --border-panel: 1px solid rgba(255, 255, 255, 0.12);
+  --border-button: 1px solid rgba(255, 255, 255, 0.06);
+  --border-radius-panel: 28px;
+  --border-radius-button: 16px;
+  
+  --shadow-panel: 0 35px 80px -20px rgba(0, 0, 0, 0.75), inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 30px rgba(139, 92, 246, 0.12);
+  --shadow-button: 0 4px 6px -1px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-button-hover: 0 10px 20px -5px rgba(139, 92, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --shadow-text: 0 2px 4px rgba(0, 0, 0, 0.4);
+  
+  --panel-backdrop: blur(40px);
+}
+
+/* 1. GLASSMORPHISM THEME (Enhanced Depth Dark Mode) */
+.theme-glass {
+  --bg-page: linear-gradient(135deg, #04050d 0%, #0b0a23 50%, #1a0624 100%);
+  --bg-panel: rgba(11, 13, 30, 0.6);
+  --bg-panel-darker: rgba(5, 6, 16, 0.8);
+  --bg-button: rgba(255, 255, 255, 0.035);
+  --bg-button-hover: rgba(255, 255, 255, 0.1);
+  --bg-button-active: rgba(255, 255, 255, 0.06);
+  --bg-button-operator: rgba(168, 85, 247, 0.18);
+  --bg-button-operator-hover: rgba(168, 85, 247, 0.32);
+  --bg-button-function: rgba(236, 72, 153, 0.14);
+  --bg-button-function-hover: rgba(236, 72, 153, 0.26);
+  --bg-button-equals: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  --bg-button-equals-hover: linear-gradient(135deg, #c084fc 0%, #f472b6 100%);
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-text-accent: #f472b6;
+  --color-text-operator: #c084fc;
+  --color-text-function: #fbcfe8;
+  --border-panel: 1px solid rgba(255, 255, 255, 0.12);
+  --border-button: 1px solid rgba(255, 255, 255, 0.05);
+  --shadow-panel: 0 40px 100px -20px rgba(0, 0, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.18), 0 0 40px rgba(168, 85, 247, 0.18);
+  --shadow-button: 0 4px 8px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --panel-backdrop: blur(40px);
+}
+
+/* 2. NEUMORPHISM THEME (Tactile & Double Shadow light mode) */
+.theme-neo {
+  --bg-page: #e6ebf4;
+  --bg-panel: #e6ebf4;
+  --bg-panel-darker: #dbe2ef;
+  --bg-button: #e6ebf4;
+  --bg-button-hover: #edf2fa;
+  --bg-button-active: #d6def0;
+  --bg-button-operator: #e6ebf4;
+  --bg-button-operator-hover: #edf2fa;
+  --bg-button-function: #e6ebf4;
+  --bg-button-function-hover: #edf2fa;
+  --bg-button-equals: #a5b4fc;
+  --bg-button-equals-hover: #b4c3ff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-text-accent: #4f46e5;
+  --color-text-operator: #6366f1;
+  --color-text-function: #ef4444;
+  --border-panel: 1px solid rgba(255, 255, 255, 0.7);
+  --border-button: none;
+  --shadow-panel: 14px 14px 28px #bec9d8, -14px -14px 28px #ffffff;
+  --shadow-button: 6px 6px 12px #bec9d8, -6px -6px 12px #ffffff;
+  --shadow-button-hover: inset 2px 2px 5px #bec9d8, inset -2px -2px 5px #ffffff;
+  --panel-backdrop: none;
+  --shadow-text: none;
+}
+
+/* 3. CYBERPUNK NEON THEME (Glowing Borders) */
+.theme-neon {
+  --bg-page: #020005;
+  --bg-panel: #06010e;
+  --bg-panel-darker: #020005;
+  --bg-button: #0b021a;
+  --bg-button-hover: #190538;
+  --bg-button-active: #100224;
+  --bg-button-operator: #070114;
+  --bg-button-operator-hover: #22004d;
+  --bg-button-function: #140010;
+  --bg-button-function-hover: #2e0024;
+  --bg-button-equals: #00ffcc;
+  --bg-button-equals-hover: #33ffd6;
+  --color-text: #00ffff;
+  --color-text-muted: #5e00d6;
+  --color-text-accent: #ff007f;
+  --color-text-operator: #00ffcc;
+  --color-text-function: #ff0055;
+  --border-panel: 2px solid #7000ff;
+  --border-button: 1px solid #ff007f;
+  --shadow-panel: 0 0 35px rgba(112, 0, 255, 0.4), inset 0 0 20px rgba(112, 0, 255, 0.25);
+  --shadow-button: 0 0 8px rgba(255, 0, 127, 0.25);
+  --shadow-button-hover: 0 0 20px rgba(255, 0, 127, 0.9), 0 0 8px rgba(255, 0, 127, 0.6);
+  --panel-backdrop: none;
+  --shadow-text: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+/* 4. CLASSIC RETRO LCD THEME */
+.theme-retro {
+  --bg-page: #2a2e2c;
+  --bg-panel: #83947a;
+  --bg-panel-darker: #77876e;
+  --bg-button: #77876e;
+  --bg-button-hover: #6e7d65;
+  --bg-button-active: #64725c;
+  --bg-button-operator: #64725c;
+  --bg-button-operator-hover: #5a6753;
+  --bg-button-function: #93a49a;
+  --bg-button-function-hover: #84948a;
+  --bg-button-equals: #2a2e2c;
+  --bg-button-equals-hover: #3a403d;
+  --color-text: #0b0f0d;
+  --color-text-muted: #27302c;
+  --color-text-accent: #0b0f0d;
+  --color-text-operator: #0b0f0d;
+  --color-text-function: #0b0f0d;
+  --border-panel: 4px solid #2a2e2c;
+  --border-button: 2px solid #2a2e2c;
+  --border-radius-panel: 0px;
+  --border-radius-button: 0px;
+  --shadow-panel: 12px 12px 0px rgba(0, 0, 0, 0.5);
+  --shadow-button: 3px 3px 0px rgba(0, 0, 0, 0.65);
+  --shadow-button-hover: 0px 0px 0px transparent;
+  --panel-backdrop: none;
+  --shadow-text: none;
+}

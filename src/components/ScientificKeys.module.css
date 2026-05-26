@@ -1,0 +1,65 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.btn {
+  background: var(--bg-button);
+  border: var(--border-button);
+  color: var(--color-text-operator);
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 16px 10px;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  
+  /* Tactile beveled keycap shadow depth */
+  box-shadow: 0 5px 0px rgba(0, 0, 0, 0.35), 
+              0 6px 10px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.12),
+              inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+              
+  transform: translateY(-2px);
+  transition: all var(--transition-fast);
+}
+
+.btn:hover {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 0px rgba(0, 0, 0, 0.35), 
+              0 8px 14px rgba(0, 0, 0, 0.3), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+  background: var(--bg-button-active);
+  transform: translateY(2px); /* Click depression */
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 
+              0 2px 4px rgba(0, 0, 0, 0.15), 
+              inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btnSpecial {
+  color: var(--color-text-accent);
+  box-shadow: 0 5px 0px rgba(219, 39, 119, 0.22), 
+              0 6px 10px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.btnSpecial:hover {
+  box-shadow: 0 6px 0px rgba(219, 39, 119, 0.28), 
+              0 8px 14px rgba(219, 39, 119, 0.2), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.22);
+}
+
+.btnSpecial:active {
+  box-shadow: 0 1px 0px rgba(219, 39, 119, 0.1), 
+              inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}

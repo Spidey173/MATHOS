@@ -1,0 +1,110 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px; /* Slightly wider spacing for tactile feel */
+}
+
+.btn {
+  background: var(--bg-button);
+  border: var(--border-button);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 18px 12px;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  
+  /* High-end beveled keycap shadow depth */
+  box-shadow: 0 5px 0px rgba(0, 0, 0, 0.35), 
+              0 6px 10px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.12),
+              inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+              
+  transform: translateY(-2px);
+  transition: all var(--transition-fast);
+}
+
+.btn:hover {
+  background: var(--bg-button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 0px rgba(0, 0, 0, 0.35), 
+              0 8px 14px rgba(0, 0, 0, 0.3), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+  background: var(--bg-button-active);
+  transform: translateY(2px); /* Physical depression! */
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 
+              0 2px 4px rgba(0, 0, 0, 0.15), 
+              inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btnFunction {
+  background: var(--bg-button-function);
+  color: var(--color-text-function);
+  border-color: rgba(244, 63, 94, 0.15);
+  box-shadow: 0 5px 0px rgba(225, 29, 72, 0.2), 
+              0 6px 10px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.btnFunction:hover {
+  background: var(--bg-button-function-hover);
+  box-shadow: 0 6px 0px rgba(225, 29, 72, 0.25), 
+              0 8px 14px rgba(225, 29, 72, 0.15), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.22);
+}
+
+.btnFunction:active {
+  box-shadow: 0 1px 0px rgba(225, 29, 72, 0.1), 
+              inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btnOperator {
+  background: var(--bg-button-operator);
+  color: var(--color-text-operator);
+  border-color: rgba(168, 85, 247, 0.15);
+  box-shadow: 0 5px 0px rgba(124, 58, 237, 0.25), 
+              0 6px 10px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.btnOperator:hover {
+  background: var(--bg-button-operator-hover);
+  box-shadow: 0 6px 0px rgba(124, 58, 237, 0.3), 
+              0 8px 14px rgba(124, 58, 237, 0.2), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.22);
+}
+
+.btnOperator:active {
+  box-shadow: 0 1px 0px rgba(124, 58, 237, 0.1), 
+              inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btnEquals {
+  background: var(--bg-button-equals);
+  color: #ffffff;
+  font-weight: 700;
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 5px 0px #7c3aed, 
+              0 6px 14px rgba(139, 92, 246, 0.4), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.btnEquals:hover {
+  background: var(--bg-button-equals-hover);
+  box-shadow: 0 6px 0px #7c3aed, 
+              0 8px 20px rgba(139, 92, 246, 0.6), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.btnEquals:active {
+  box-shadow: 0 1px 0px #7c3aed, 
+              inset 0 2px 6px rgba(0, 0, 0, 0.4);
+}

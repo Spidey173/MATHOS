@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.02);
+  border: var(--border-button);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  
+  /* Tactile beveled keycap shadow depth */
+  box-shadow: 0 4px 0px rgba(0, 0, 0, 0.35), 
+              0 5px 8px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.08);
+              
+  transform: translateY(-2px);
+  transition: all var(--transition-fast);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--bg-button-hover);
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0px rgba(0, 0, 0, 0.35), 
+              0 6px 12px rgba(0, 0, 0, 0.3), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(2px); /* Click depression */
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 
+              inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btnHighlight {
+  color: var(--color-text-accent);
+}
+
+.disabledClear {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
