@@ -107,39 +107,6 @@ Ensure you have **Node.js (v16.0.0 or higher)** installed.
 
 ---
 
-## ☁️ Deployment Instructions
-
-### ⚡ Deploying on Vercel
-The absolute easiest way to deploy the suite is using Vercel:
-
-1. Install Vercel CLI:
-   ```bash
-   npm install -g vercel
-   ```
-2. Run deployment command in root directory:
-   ```bash
-   vercel
-   ```
-3. Follow the prompts. The build folder is automatically set to `build` by CRA configurations!
-
-### 🌍 Deploying on Netlify
-To publish live on Netlify:
-
-1. Install Netlify CLI:
-   ```bash
-   npm install -g netlify-cli
-   ```
-2. Build the production assets:
-   ```bash
-   npm run build
-   ```
-3. Trigger deployment:
-   ```bash
-   netlify deploy --dir=build --prod
-   ```
-
----
-
 ## 🤝 Contribution Guidelines
 
 We highly encourage mathematical and stylistic contributions! 
